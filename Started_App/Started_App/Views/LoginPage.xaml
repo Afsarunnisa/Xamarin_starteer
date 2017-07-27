@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Started_App.Views.LoginPage">
+	<ContentPage.Content>
+
+        <StackLayout Spacing="20" x:Name="layout">
+
+            <StackLayout  Spacing="20" >
+                <Label Text="User Name" FontSize="20" 
+                 VerticalOptions="Center" FontAttributes="Bold" />
+                <Entry TextColor="Black" Text="{Binding LoginUserObject.username}"
+                  HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+
+             <StackLayout  Spacing="20" >
+                <Label Text="Password" FontSize="20"
+                 VerticalOptions="Center" FontAttributes="Bold" />
+                <Entry TextColor="Black" Text="{Binding LoginUserObject.password}"
+                  HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+
+            <Button x:Name = "LoginBtn" Text="Login" TextColor="White" BackgroundColor=
+"#77D065" Command="{Binding LoginBtnCommand}" VerticalOptions="End"/>
+            
+             <Button x:Name="SignUpBtn" Text="SignUp" TextColor="White"
+                BackgroundColor="#77D065"
+                Command="{Binding SignUpBtnCommand}" VerticalOptions="End"/>
+
+        </StackLayout>
+ 
+	</ContentPage.Content>
+</ContentPage>
