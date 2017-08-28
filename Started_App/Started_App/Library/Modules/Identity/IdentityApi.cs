@@ -31,18 +31,12 @@ namespace Started_App.Library.Modules.Identity
 
             var loginValue = await remoteAPI.login(login);
 
-			Debug.WriteLine("tokenValue {0}", loginValue);
-
 			NewMemberApiModel member = JsonConvert.DeserializeObject<NewMemberApiModel>(loginValue);
+            Debug.WriteLine("login token {0}", member.token.access_token);
 
             apiContext.setUserToken("identity", member.token);
 
-            Debug.WriteLine("firstName {0}", member.member.firstName);
-			
-            Debug.WriteLine("usrname  {0}", member.member.email);
-
-
-            return member.member;
+			return member.member;
         }
 
 
@@ -57,17 +51,43 @@ namespace Started_App.Library.Modules.Identity
 
             var signupValue = await remoteAPI.signUp(signUp);
 
-			Debug.WriteLine("signupValue {0}", signupValue);
-
 			NewMemberApiModel memberModel = JsonConvert.DeserializeObject<NewMemberApiModel>(signupValue);
 			apiContext.setUserToken("identity", memberModel.token);
 
-			Debug.WriteLine("memberModel {0}", memberModel);
-            Debug.WriteLine("memberModel {0}", memberModel.member);
-            Debug.WriteLine("memberModel {0}", memberModel.member.email);
+			Debug.WriteLine("signup token {0}", memberModel.token);
 
-            return memberModel.member;
+
+			return memberModel.member;
 
 		}
-    }
+
+        public async Task<MemberApiModel> getProfile(int userId){
+
+			IdentityRemoteApi remoteAPI = new IdentityRemoteApi();
+			IdsXamarinApiContext apiContext = AbstractApiContext.get("app") as IdsXamarinApiContext;
+
+            var profileValue = await remoteAPI.GetProfile(userId);
+
+            MemberApiModel memberModel = JsonConvert.DeserializeObject<MemberApiModel>(profileValue);
+
+            return memberModel;
+		}
+
+
+        public async Task<MemberApiModel> UpdateProfile(Dictionary<string, string> userDetails, int userId)
+        {
+			IdentityRemoteApi remoteAPI = new IdentityRemoteApi();
+			IdsXamarinApiContext apiContext = AbstractApiContext.get("app") as IdsXamarinApiContext;
+
+            var profileValue = await remoteAPI.UpdateProfile(userDetails, userId);
+
+            Debug.WriteLine("profileValue {0}", profileValue);
+
+			MemberApiModel memberModel = JsonConvert.DeserializeObject<MemberApiModel>(profileValue);
+
+			return memberModel;
+        }
+
+
+	}
 }

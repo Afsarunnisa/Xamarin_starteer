@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 using Started_App.Library.API.Models;
 
@@ -53,21 +54,33 @@ namespace Started_App.Library.API
 
 		override public void setUserToken(String moduleName, TokenApiModel tokenApiModel)
 		{
-            tokens.Add(moduleName, tokenApiModel);
-			if (tokens["default"] == null)
-			{
-                tokens.Add("default", tokenApiModel);
-			}
+
+			store.Add("token.user", tokenApiModel);
+
+
+			//         Debug.WriteLine("allkeys {0}", tokens.Keys);
+
+
+			//Debug.WriteLine("moduleName {0}", moduleName);
+
+			//         tokens.Add(moduleName, tokenApiModel);
+			////if (tokens["default"] == null)
+			////{
+			//             tokens.Add("default", tokenApiModel);
+			////}
 		}
 
 		override public TokenApiModel getUserToken(String moduleName)
 		{
-			TokenApiModel tokenApiModel = tokens[moduleName];
-			if (tokenApiModel == null)
-			{
-				tokenApiModel = tokens["default"];
-			}
-			return tokenApiModel;
+			//TokenApiModel tokenApiModel = tokens[moduleName];
+			//if (tokenApiModel == null)
+			//{
+			//	tokenApiModel = tokens["default"];
+			//}
+			//return tokenApiModel;
+
+			return (TokenApiModel)store["token.user"];
+
 		}
 
 		override public void setHost(String moduleName, String host)
@@ -80,13 +93,5 @@ namespace Started_App.Library.API
 		{
 			return hosts[moduleName];
 		}
-
-
-
-
-
-
-
-
 	}
 }

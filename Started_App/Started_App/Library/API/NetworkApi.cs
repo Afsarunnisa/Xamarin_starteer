@@ -70,20 +70,21 @@ namespace Started_App.Library.API
         }
 
 
-        public async void getRequest(string requestUrl, Dictionary<string, string> paramsDict, Dictionary<string, string> headers, string token)
+        public async Task<HttpResponseMessage> getRequest(string requestUrl, Dictionary<string, string> paramsDict, Dictionary<string, string> headers, string token)
         {
 			var myHttpClient = new HttpClient();
             var content = this.GetStringContent(paramsDict);
 
 			myHttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-			var response = await myHttpClient.GetAsync(requestUrl);
+			HttpResponseMessage response = await myHttpClient.GetAsync(requestUrl);
 
             Debug.WriteLine("response {0}", response);
+			return response;
 
 		}
 
-        public async void getRequestWithEncode(string requestUrl, Dictionary<string, string> paramsDict, Dictionary<string, string> headers, string token)
+        public async Task<HttpResponseMessage> getRequestWithEncode(string requestUrl, Dictionary<string, string> paramsDict, Dictionary<string, string> headers, string token)
         {
 
 
@@ -92,10 +93,11 @@ namespace Started_App.Library.API
 
 			myHttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-            var response = await myHttpClient.GetAsync(requestUrl);
+            HttpResponseMessage response = await myHttpClient.GetAsync(requestUrl);
 
 			Debug.WriteLine("response {0}", response);
 
+			return response;
 
 		}
 
@@ -118,27 +120,45 @@ namespace Started_App.Library.API
 				var json = JsonConvert.SerializeObject(jsonObject);
 				var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-				Debug.WriteLine("json {0}", json);
-
-				Debug.WriteLine("content {0}", content);
-
-
-				Debug.WriteLine("requestUrl {0}", requestUrl);
-
-
 				HttpResponseMessage response = await myHttpClient.PostAsync(requestUrl, content);
-
-				Debug.WriteLine("response {0}", response);
-
 				return response;
 			}
 			catch (Exception ex)
-
 			{
-				Debug.WriteLine(@"   ERROR {0}", ex.Message);
                 return null;
 			}
 		
+
+		}
+
+		public async Task<HttpResponseMessage> putRequest(string requestUrl, object jsonObject, Dictionary<string, string> headers, string token)
+		{
+			var myHttpClient = new HttpClient();
+			//  var content = this.GetStringContent(paramsDict);
+
+
+			try
+			{
+
+				Debug.WriteLine("token {0}", token);
+
+				if (token != "")
+				{
+					myHttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+				}
+
+
+				var json = JsonConvert.SerializeObject(jsonObject);
+				var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage response = await myHttpClient.PutAsync(requestUrl, content);
+				return response;
+			}
+			catch (Exception ex)
+			{
+				return null;
+			}
+
 
 		}
 
@@ -193,13 +213,19 @@ namespace Started_App.Library.API
 
         public StringContent GetStringContent(Dictionary<string, string> paramsDict)
         {
-            Debug.WriteLine("response {0}", paramsDict.Keys);
+            if(paramsDict != null){
+				Debug.WriteLine("paramsDict {0}", paramsDict.Keys);
 
-            foreach (var key in paramsDict.Keys){
-                Debug.WriteLine("key {0} value {1}", key, paramsDict[key]);
-            }
+				foreach (var key in paramsDict.Keys)
+				{
+					Debug.WriteLine("key {0} value {1}", key, paramsDict[key]);
+				}
 
-            return new StringContent(JsonConvert.SerializeObject(paramsDict), Encoding.UTF8, "application/json");
+				return new StringContent(JsonConvert.SerializeObject(paramsDict), Encoding.UTF8, "application/json");
+			}
+
+            return null;
+
         }
 
 

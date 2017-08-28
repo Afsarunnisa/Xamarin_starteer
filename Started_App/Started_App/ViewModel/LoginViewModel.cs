@@ -1,12 +1,10 @@
-﻿using System; using System.Windows.Input; using System.Collections.Generic; using System.Collections.ObjectModel; using System.ComponentModel; using System.Linq; using System.Runtime.CompilerServices; using System.Text; using System.Threading.Tasks; using System.Diagnostics;   using Started_App.Views;  using Started_App.Library.Modules.Token; using Started_App.Library.Modules.Identity; using Started_App.Library.Modules.IDS; using Started_App.Library.API.Models;   using Xamarin.Forms; 
+﻿using System; using System.Windows.Input; using System.Collections.Generic; using System.Collections.ObjectModel; using System.ComponentModel; using System.Linq; using System.Runtime.CompilerServices; using System.Text; using System.Threading.Tasks; using System.Diagnostics;   using Started_App.Views;   using Started_App.Library.Modules.Token; using Started_App.Library.Modules.Identity; using Started_App.Library.Modules.IDS; using Started_App.Library.API.Models;   using Xamarin.Forms; 
 namespace Started_App.ViewModel
 {
     public class LoginViewModel : BaseViewModel
     {
 
 		private INavigation _navigation;
-
-
 
 		public LoginViewModel(INavigation navitation)
         {
@@ -24,20 +22,15 @@ namespace Started_App.ViewModel
         #region Methods  
         private async Task ExecuteOnLoginClick()
         {
-
 			var loginUser = LoginUserObject;
-
-            Debug.WriteLine("loginUser name {0}", loginUser.username);
-
-            Debug.WriteLine("loginUser password {0}", loginUser.password);
-
 
 			Type identityApiClass = IDS.getModuleApi("identity");
 			object instance = Activator.CreateInstance(identityApiClass);
             IdentityApi identityAPi = instance as IdentityApi;
 
-            identityAPi.login(loginUser);   
-		}
+            MemberApiModel member = await identityAPi.login(loginUser);
+             if(member != null){                 await _navigation.PushAsync(new MainPage(member));
+			} 		}
 
 		#endregion 
             #region DelegateCommand         Command SignUpBtnCommandCommand;         /// <summary>         /// Gets the save command.         /// </summary>         /// <value>The save command.</value>        public Command SignUpBtnCommand       {            get               {                 return SignUpBtnCommandCommand ?? (SignUpBtnCommandCommand = new Command(async () => await ExecuteOnSignUpClick()));                }         }

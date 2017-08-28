@@ -31,8 +31,10 @@ namespace Started_App
 
 			MainPage = new NavigationPage(new LoginPage());
 
+			//MainPage = new LoginPage();
 
-        }
+
+		}
 
         protected override void OnStart()
         {

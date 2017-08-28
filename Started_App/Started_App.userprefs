@@ -1,64 +1,42 @@
 ﻿<Properties StartupConfiguration="{56539A5B-9354-4F55-A9C5-33127072B17C}|Default">
   <MonoDevelop.Ide.ItemProperties.Started__App.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Started_App/ViewModel/SignUpViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Started_App/Library/API/NetworkApi.cs">
     <Files>
-      <File FileName="Started_App/Library/Modules/Token/TokenApi.cs" Line="41" Column="38" />
-      <File FileName="Started_App/Library/API/NetworkApi.cs" Line="134" Column="1" />
-      <File FileName="Started_App/ViewModel/LoginViewModel.cs" Line="101" Column="66" />
-      <File FileName="Started_App/Library/Modules/Identity/IdentityApi.cs" Line="47" Column="1" />
-      <File FileName="Started_App/Views/LoginPage.xaml.cs" Line="21" Column="27" />
-      <File FileName="Started_App/Library/API/AbstractApiContext.cs" Line="29" Column="24" />
-      <File FileName="Started_App/Library/API/ApiContext.cs" Line="24" Column="8" />
-      <File FileName="Started_App/Library/API/IdsXamarinApiContext.cs" Line="58" Column="30" />
-      <File FileName="Started_App/ViewModel/SignUpViewModel.cs" Line="89" Column="31" />
+      <File FileName="Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" Line="134" Column="71" />
+      <File FileName="Started_App/Library/API/Models/MemberApiModel.cs" Line="22" Column="27" />
+      <File FileName="Started_App/Library/Modules/Identity/IdentityIdsRegistry.cs" Line="1" Column="1" />
+      <File FileName="Started_App/ViewModel/ProfilePageViewModel.cs" Line="156" Column="1" />
+      <File FileName="Started_App/Library/Modules/Identity/IdentityApi.cs" Line="82" Column="1" />
+      <File FileName="Started_App/Library/API/NetworkApi.cs" Line="154" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/InMemoryApiContext.cs" relfile="Started_App/Library/API/InMemoryApiContext.cs" line="27" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/InMemoryApiContext.cs" relfile="Started_App/Library/API/InMemoryApiContext.cs" line="33" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="82" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="97" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="189" column="13" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/AbstractApiContext.cs" relfile="Started_App/Library/API/AbstractApiContext.cs" line="73" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/AbstractApiContext.cs" relfile="Started_App/Library/API/AbstractApiContext.cs" line="71" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="18" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/InMemoryApiContext.cs" relfile="Started_App/Library/API/InMemoryApiContext.cs" line="75" column="18" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/InMemoryApiContext.cs" relfile="Started_App/Library/API/InMemoryApiContext.cs" line="81" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/ViewModel/LoginViewModel.cs" relfile="Started_App/ViewModel/LoginViewModel.cs" line="91" column="73" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/ViewModel/LoginViewModel.cs" relfile="Started_App/ViewModel/LoginViewModel.cs" line="86" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/ViewModel/LoginViewModel.cs" relfile="Started_App/ViewModel/LoginViewModel.cs" line="97" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" line="80" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/ViewModel/LoginViewModel.cs" relfile="Started_App/ViewModel/LoginViewModel.cs" line="90" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="197" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="200" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="203" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Identity/IdentityApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityApi.cs" line="25" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Identity/IdentityApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityApi.cs" line="28" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="139" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="132" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="122" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="127" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="124" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="130" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Identity/IdentityApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityApi.cs" line="58" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" line="92" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" line="96" column="89" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" line="99" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/ViewModel/SignUpViewModel.cs" relfile="Started_App/ViewModel/SignUpViewModel.cs" line="89" column="42" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/ViewModel/SignUpViewModel.cs" relfile="Started_App/ViewModel/SignUpViewModel.cs" line="79" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Identity/IdentityApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityApi.cs" line="60" column="50" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Identity/IdentityApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityApi.cs" line="65" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Identity/IdentityApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityApi.cs" line="66" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Identity/IdentityApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityApi.cs" line="67" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Token/TokenApi.cs" relfile="Started_App/Library/Modules/Token/TokenApi.cs" line="46" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Token/TokenApi.cs" relfile="Started_App/Library/Modules/Token/TokenApi.cs" line="43" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="134" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Identity/IdentityApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityApi.cs" line="34" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Identity/IdentityApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityApi.cs" line="36" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Identity/IdentityApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityApi.cs" line="40" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Xam/Started_App/Started_App/Library/Modules/Identity/IdentityApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityApi.cs" line="42" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/API/InMemoryApiContext.cs" relfile="Started_App/Library/API/InMemoryApiContext.cs" line="27" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/API/InMemoryApiContext.cs" relfile="Started_App/Library/API/InMemoryApiContext.cs" line="33" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="98" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="178" column="13" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/API/AbstractApiContext.cs" relfile="Started_App/Library/API/AbstractApiContext.cs" line="73" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/API/AbstractApiContext.cs" relfile="Started_App/Library/API/AbstractApiContext.cs" line="71" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/API/NetworkApi.cs" relfile="Started_App/Library/API/NetworkApi.cs" line="18" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/ViewModel/SignUpViewModel.cs" relfile="Started_App/ViewModel/SignUpViewModel.cs" line="89" column="42" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/ViewModel/SignUpViewModel.cs" relfile="Started_App/ViewModel/SignUpViewModel.cs" line="79" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/API/IdsXamarinApiContext.cs" relfile="Started_App/Library/API/IdsXamarinApiContext.cs" line="107" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/API/IdsXamarinApiContext.cs" relfile="Started_App/Library/API/IdsXamarinApiContext.cs" line="105" column="76" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/Modules/Identity/IdentityApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityApi.cs" line="57" column="51" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/API/IdsXamarinApiContext.cs" relfile="Started_App/Library/API/IdsXamarinApiContext.cs" line="101" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/ViewModel/ProfilePageViewModel.cs" relfile="Started_App/ViewModel/ProfilePageViewModel.cs" line="154" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/ViewModel/ProfilePageViewModel.cs" relfile="Started_App/ViewModel/ProfilePageViewModel.cs" line="156" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" line="138" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" line="126" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/Modules/Identity/IdentityApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityApi.cs" line="86" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/Modules/Identity/IdentityApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityApi.cs" line="88" column="23" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/Modules/Identity/IdentityApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityApi.cs" line="82" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/Modules/Identity/IdentityApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityApi.cs" line="84" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/ViewModel/ProfilePageViewModel.cs" relfile="Started_App/ViewModel/ProfilePageViewModel.cs" line="172" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" line="131" column="48" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamarin_starteer/Started_App/Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" relfile="Started_App/Library/Modules/Identity/IdentityRemoteApi.cs" line="122" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

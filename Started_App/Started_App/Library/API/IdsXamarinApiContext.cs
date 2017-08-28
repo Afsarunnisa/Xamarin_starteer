@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 
 using Started_App;
@@ -82,7 +83,7 @@ namespace Started_App.Library.API
 
         override public void setUserToken(String moduleName, TokenApiModel tokenApiModel)
         {
-            this.saveModel("token.client", tokenApiModel);
+            this.saveModel("token.user", tokenApiModel);
             base.setUserToken(moduleName, tokenApiModel);
         }
 
@@ -90,7 +91,7 @@ namespace Started_App.Library.API
         override public TokenApiModel getUserToken(String moduleName)
         {
 
-            TokenApiModel tokenApiModel = base.getClientToken();
+            TokenApiModel tokenApiModel = base.getUserToken(moduleName);
 
             if (tokenApiModel != null)
             {
@@ -99,6 +100,9 @@ namespace Started_App.Library.API
 
             tokenApiModel = (TokenApiModel)this.readModel("token.user");
             base.setClientToken(tokenApiModel);
+
+
+            Debug.WriteLine("tokenApiModel {0}", tokenApiModel.access_token);
 
             return tokenApiModel;
         }

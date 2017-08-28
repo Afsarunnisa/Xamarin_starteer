@@ -6,6 +6,7 @@ namespace Started_App.ViewModel
     {
         public BaseViewModel()
         {
+            
         }
     }
 }

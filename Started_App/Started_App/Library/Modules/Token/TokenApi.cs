@@ -41,8 +41,6 @@ namespace Started_App.Library.Modules.Token
             apiContext.setClientToken(mytoken);
 
             Debug.WriteLine("mytoken value {0}", mytoken.access_token);
-
-
 			Debug.WriteLine("tokenValue {0}", tokenValue);
 
 		}
